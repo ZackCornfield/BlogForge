@@ -17,13 +17,18 @@ const authController = {
             }
 
             const isPasswordValid = await bcrypt.compare(password, user.password);
-            if(!isPasswordValid) {
+            if (!isPasswordValid) {
                 throw new CustomError(401, 'Invalid password');
             }
 
             const token = generateAccessToken({ username: user.username, role_id: user.role_id });
-            res.status(200).json({ message: 'Login successful', token, user: { username: user.username, role_id: user.role_id } });
-        } catch(err) {
+
+            res.status(200).json({ 
+                message: 'Login successful', 
+                token,  // Send token in response body
+                user: { username: user.username, role_id: user.role_id }
+            });
+        } catch (err) {
             next(err);
         }
     },

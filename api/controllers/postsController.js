@@ -1,9 +1,7 @@
 const CustomError = require('../utils/CustomError');
-
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient()
 const formatDate = require('../utils/formatDate');
-
 const uploadImage = require('../utils/uploadImage');
 
 const postsController = {

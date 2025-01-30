@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "build": "npx prisma generate",
-    "deploy": "npx prisma generate && npx prisma migrate deploy && node app.js"
+    "deploy": "npx prisma generate && npx prisma migrate deploy && node app.js",
+    "populate-roles": "node scripts/populateRoles.js"
   },
   "keywords": [],
   "author": "",
