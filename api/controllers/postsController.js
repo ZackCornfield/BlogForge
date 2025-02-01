@@ -204,9 +204,6 @@ const postsController = {
             const post = await prisma.post.findUnique({
                 where: {
                     title: req.params.post_title
-                },
-                orderBy: {
-                    created_at: 'desc'
                 }
             });
 
@@ -218,15 +215,19 @@ const postsController = {
                 where: {
                     post_id: post.id
                 },
+                orderBy: {
+                    created_at: 'desc'
+                },
                 include: {
                     user: true
                 }
-            })
+            });
 
             comments.forEach(comment => {
                 comment.created_at = formatDate(comment.created_at);
-            })
-            const updatedComments = comments.map(comment => ({ ...comment, user: comment.user.username }))
+            });
+
+            const updatedComments = comments.map(comment => ({ ...comment, user: comment.user.username }));
 
             return res.status(200).json(updatedComments);
         } catch (err) {
