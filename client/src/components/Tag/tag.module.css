@@ -1,0 +1,29 @@
+.tag {
+    padding: 4px 8px;
+
+    border-radius: 9999px;
+
+    font-family: Monsterrat;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.clickable {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.clickable:hover {
+    box-shadow: var(--color-error) 0px 0px 0px 1px;
+}
+
+.date {
+    background-color: rgba(129, 230, 217, 0.16);
+    color: var(--color-secondary);
+}
+
+.category {
+    background-color: var(--tag-background);
+    color: var(--color-primary);
+}

@@ -1,0 +1,12 @@
+{
+  "name": "blogforge",
+  "version": "1.0.0",
+  "description": "Full stack API Blog written with React and NodeJs w/ Express using Prisma ORM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,69 @@
+.postListWrapper h2 {
+    font-size: 2rem;
+}
+
+.listContainer {
+    background-color: var(--color-background-lighter);
+    border-radius: 16px;
+}
+
+.post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.post:not(:last-child) {
+    border-bottom: 1px solid var(--color-border);
+}
+.post .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.post .info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.post .info .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+.post .actions {
+    display: flex;
+    gap: 1rem;
+}
+.post .actions button {
+    padding: 0.5rem 1rem;
+
+    transition: 0.2s ease;
+    background-color: inherit;
+    border: 1px solid;
+    border-radius: 8px;
+}
+.post .actions button.edit {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+.post .actions button.edit:hover {
+    background-color: var(--color-primary);
+    color: var(--color-font-primary);
+}
+.post .actions button.delete {
+    border-color: var(--color-error);
+    color: var(--color-error);
+}
+.post .actions button.delete:hover {
+    background-color: var(--color-error);
+    color: var(--color-font-primary);
+}
+
+@media screen and (max-width: 900px) {
+    .post {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
