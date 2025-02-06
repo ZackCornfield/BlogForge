@@ -20,6 +20,8 @@ This project is a **RESTful Blog API** built with **Express.js and Prisma**, fea
   <img src="https://github.com/ZackCornfield/BlogForge/blob/main/screenshot_3.png" width="600">
 </p>
 
+**Video**
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/800eXupbENI/0.jpg)](https://www.youtube.com/watch?v=800eXupbENI)
 
 ---
